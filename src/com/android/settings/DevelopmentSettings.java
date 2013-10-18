@@ -482,6 +482,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         updateShowTouchesOptions();
         updateFlingerOptions();
         updateCpuUsageOptions();
+        updateSystemTimeOptions();
         updateHardwareUiOptions();
         updateMsaaOptions();
         updateTrackFrameTimeOptions();
@@ -964,6 +965,15 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     private void updateCpuUsageOptions() {
         updateCheckBox(mShowCpuUsage, Settings.Global.getInt(getActivity().getContentResolver(),
                 Settings.Global.SHOW_PROCESSES, 0) != 0);
+        Log.i(TAG, "updateCpuUsageOptions:" + Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.SHOW_PROCESSES, 0));
+    }
+	
+    private void updateSystemTimeOptions() {
+        updateCheckBox(mShowSystemTime, Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.SHOW_SYSTEM_TIME, 0) != 0);
+        Log.i(TAG, "updateSystemTimeOptions:" + Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.SHOW_PROCESSES, 0));
     }
 
     private void writeCpuUsageOptions() {
@@ -981,6 +991,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
 
     private void writeSystemTimeOptions(){
        boolean value = mShowSystemTime.isChecked();
+       Log.i(TAG, "writeSystemTimeOptions: " + value);
+       Settings.Global.putInt(getActivity().getContentResolver(),
+               Settings.Global.SHOW_SYSTEM_TIME, value ? 1 : 0);
        Intent service = (new Intent())
                 .setClassName("com.android.systemui", "com.android.systemui.LoadSystemTime");
         if (value) {
