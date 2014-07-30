@@ -1225,6 +1225,101 @@
     <!-- Bluetooth settings.  Dock Setting Dialog - Remember setting and don't ask user again -->
     <string name="bluetooth_dock_settings_remember">Remember settings</string>
 
+    <string name="alarm_reboot_title">Reboot</string>
+    <string name="alarm_reboot_msg">Main Display Mode/Depth Changed, Need reboot</string>
+    <string name="pluggable_display_settings_title">Advanced display</string>
+    <string name="pluggable_display_settings">Advanced display</string>
+    <string name="pluggable_settings_primary_display">primary display</string>
+    <string name="pluggable_settings_added_dislay">added display</string>
+    <string name="pluggable_settings_display_hdmi">HDMI</string>
+    <string name="pluggable_settings_display_ldb">LCD</string>
+    <string name="pluggable_settings_display_mode">Display Mode</string>
+    <string name="pluggable_settings_colordepth">Color Depth</string>
+    <string name="pluggable_settings_enable_display">Enable Display</string>
+    <string name="pluggable_settings_width_overscan">Width OverScan</string>
+    <string name="pluggable_settings_height_overscan">Height OverScan</string>
+    <string name="pluggable_settings_aspect_ratio">Aspect Ratio</string>
+    <string name="pluggable_settings_keep_highest_mode">Keep Highest Mode</string>
+    <string name="audio_pass_through">Audio PassThrough</string>
+
+    <string name="pluggable_display_category_title_1">Display 1</string>
+    <string name="display_enable_title_1">Enable Display</string>
+    <string name="display_mirror_title_1">Mirror</string>
+    <string name="display_overscan_title_1">OverScan</string>
+
+    <string name="title_display_mode_1">Display Mode</string>
+    <string name="summary_display_mode_1" translatable="false">No display plugged</string>
+    <string name="dialog_title_display_mode_1">Display Mode</string>
+    <string name="title_display_rotation_1">Rotation</string>
+    <string name="summary_display_rotation_1">Rotation</string>
+    <string name="dialog_title_display_rotation_1">Rotation</string>
+    <string name="title_display_colordepth_1">Color Depth</string>
+    <string name="summary_display_colordepth_1">Color Depth</string>
+    <string name="dialog_title_display_colordepth_1">Color Depth</string>
+
+    <string name="display_enable_error_1">enable error</string>
+    <string name="display_mirror_error_1">mirror error</string>
+    <string name="display_overscan_error_1">overscan error</string>
+    <string name="display_rotation_error_1">rotation error</string>
+    <string name="display_colordepth_error_1">colordepth error</string>
+
+    <string name="pluggable_display_category_title_2">Display 2</string>
+    <string name="display_enable_title_2">Enable Display</string>
+    <string name="display_mirror_title_2">Mirror</string>
+    <string name="display_overscan_title_2">OverScan</string>
+    <string name="title_display_mode_2">Display Mode</string>
+    <string name="summary_display_mode_2" translatable="false">No display plugged</string>
+    <string name="dialog_title_display_mode_2">Display Mode</string>
+    <string name="title_display_rotation_2">Rotation</string>
+    <string name="summary_display_rotation_2">Rotation</string>
+    <string name="dialog_title_display_rotation_2">Rotation</string>
+    <string name="title_display_colordepth_2">Color Depth</string>
+    <string name="summary_display_colordepth_2">Color Depth</string>
+    <string name="dialog_title_display_colordepth_2">Color Depth</string>
+    <string name="display_enable_error_2">enable error</string>
+    <string name="display_mirror_error_2">mirror error</string>
+    <string name="display_overscan_error_2">overscan error</string>
+    <string name="display_rotation_error_2">rotation error</string>
+    <string name="display_colordepth_error_2">colordepth error</string>
+
+    <string name="pluggable_display_category_title_3">Display 3</string>
+    <string name="display_enable_title_3">Enable Display</string>
+    <string name="display_mirror_title_3">Mirror</string>
+    <string name="display_overscan_title_3">OverScan</string>
+    <string name="title_display_mode_3">Display Mode</string>
+    <string name="summary_display_mode_3" translatable="false">No display plugged</string>
+    <string name="dialog_title_display_mode_3">Display Mode</string>
+    <string name="title_display_rotation_3">Rotation</string>
+    <string name="summary_display_rotation_3">Rotation</string>
+    <string name="dialog_title_display_rotation_3">Rotation</string>
+    <string name="title_display_colordepth_3">Color Depth</string>
+    <string name="summary_display_colordepth_3">Color Depth</string>
+    <string name="dialog_title_display_colordepth_3">Color Depth</string>
+    <string name="display_enable_error_3">enable error</string>
+    <string name="display_mirror_error_3">mirror error</string>
+    <string name="display_overscan_error_3">overscan error</string>
+    <string name="display_rotation_error_3">rotation error</string>
+    <string name="display_colordepth_error_3">colordepth error</string>
+
+    <string name="pluggable_display_category_title_4">Display 4</string>
+    <string name="display_enable_title_4">Enable Display</string>
+    <string name="display_mirror_title_4">Mirror</string>
+    <string name="display_overscan_title_4">OverScan</string>
+    <string name="title_display_mode_4">Display Mode</string>
+    <string name="summary_display_mode_4" translatable="false">No display plugged</string>
+    <string name="dialog_title_display_mode_4">Display Mode</string>
+    <string name="title_display_rotation_4">Rotation</string>
+    <string name="summary_display_rotation_4">Rotation</string>
+    <string name="dialog_title_display_rotation_4">Rotation</string>
+    <string name="title_display_colordepth_4">Color Depth</string>
+    <string name="summary_display_colordepth_4">Color Depth</string>
+    <string name="dialog_title_display_colordepth_4">Color Depth</string>
+    <string name="display_enable_error_4">enable error</string>
+    <string name="display_mirror_error_4">mirror error</string>
+    <string name="display_overscan_error_4">overscan error</string>
+    <string name="display_rotation_error_4">rotation error</string>
+    <string name="display_colordepth_error_4">colordepth error</string>
+
     <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
     <string name="wifi_display_settings_title">Cast screen</string>
     <!-- Wifi Display settings. The title of a menu item to enable wireless display [CHAR LIMIT=40] -->

@@ -62,4 +62,9 @@
                 android:title="@string/wifi_display_settings_title"
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
+        <PreferenceScreen
+                android:key="pluggable_display"
+                android:title="@string/pluggable_display_settings_title"
+                android:fragment="com.android.settings.PluggableDisplaySettings" />
+
 </PreferenceScreen>

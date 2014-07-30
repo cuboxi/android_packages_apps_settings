@@ -32,9 +32,13 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceScreen;
+import android.preference.PreferenceActivity;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.DreamSettings;
@@ -53,6 +57,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_SCREEN_SAVER = "screensaver";
+    private static final String KEY_PLUGGABLE_DISPLAY = "pluggable_display";
+
+    private static final int MENU_ID_DISP = Menu.FIRST;
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
@@ -64,6 +71,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     
     private ListPreference mScreenTimeoutPreference;
     private Preference mScreenSaverPreference;
+
+    private Preference mPluggableDisplayPreference;
 
     private final RotationPolicy.RotationPolicyListener mRotationPolicyListener =
             new RotationPolicy.RotationPolicyListener() {
@@ -122,6 +131,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
             }
         }
+
+        mPluggableDisplayPreference = (Preference)findPreference(KEY_PLUGGABLE_DISPLAY);
     }
 
     private void updateTimeoutPreferenceDescription(long currentTimeout) {
@@ -252,6 +263,31 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                     });
         }
         return null;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(Menu.NONE, MENU_ID_DISP, 0, R.string.pluggable_display_settings)
+                //.setIcon(com.android.internal.R.drawable.stat_sys_data_usb)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_ID_DISP:
+                if (getActivity() instanceof PreferenceActivity) {
+                    ((PreferenceActivity) getActivity()).startPreferencePanel(
+                            PluggableDisplaySettings.class.getCanonicalName(),
+                            null,
+                            R.string.pluggable_display_settings, null,
+                            this, 0);
+                } else {
+                    startFragment(this, PluggableDisplaySettings.class.getCanonicalName(), -1, null);
+                }
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void updateState() {
